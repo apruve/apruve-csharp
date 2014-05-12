@@ -108,6 +108,6 @@ You can download the ApruveTest NuGet package [here](https://www.nuget.org/packa
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Write your code **and tests**
 4. Ensure all [tests](#testing) still pass
-5. Commit your changes (`git commit -am 'Add some feature'`)
+5. Commit your changes (`git commit -m 'Add some feature'`)
 6. Push to the branch (`git push origin my-new-feature`)
 7. Create new pull request
