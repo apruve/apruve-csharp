@@ -87,9 +87,9 @@ API Calls either return instances of the method class, or an instance of Payment
 PaymentRequestUpdateResponse response = PaymentRequest.finalize(paymentRequestId);
 if (response != null) {
   System.Diagnostics.Debug.WriteLine("The new status is: " + response.status);
-  } else {
-    System.Diagnostics.Debug.WriteLine("Request Failed: " + ApruveException.message);
-  }
+} else {
+  System.Diagnostics.Debug.WriteLine("Request Failed: " + ApruveException.message);
+}
 ```
 
 ## Testing
