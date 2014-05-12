@@ -100,7 +100,7 @@ if (response != null) {
 
 This repository includes an ApruveTest project intended to be used with the Microsoft Unit Test Framework. These tests can be run with Microsoft Visual Studio's [Test Explorer](http://msdn.microsoft.com/en-us/library/hh270865.aspx).
 
-You can download a NuGet package, which will pull in all necessary dependencies for testing for you, [here](https://www.nuget.org/packages/ApruveTest/).
+You can download the ApruveTest NuGet package [here](https://www.nuget.org/packages/ApruveTest/). Installing it will pull in all the necessary dependencies for testing for you. 
 
 ## Contributing
 
