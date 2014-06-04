@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ApruveTest")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Tests for C# client library for interacting with the Apruve API")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("ApruveTest")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
+[assembly: AssemblyCompany("Apruve, Inc.")]
+[assembly: AssemblyProduct("Apruve C# Client Library")]
+[assembly: AssemblyCopyright("Copyright © Apruve 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

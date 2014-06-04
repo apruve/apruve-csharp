@@ -42,20 +42,21 @@ namespace Apruve.Models
             // Return the response object, which should be a PaymentRequest object
             return apruveResponse;
         }
-        public static PaymentRequestUpdateResponse update(PaymentRequest paymentRequest)
+
+        public PaymentRequestUpdateResponse update()
         {
             var apruveClient = ApruveClient.getInstance();
-            string uri = "/api/v3/payment_requests/" + paymentRequest.id;
-            var apruveResponse = apruveClient.put<PaymentRequestUpdateResponse>(uri, paymentRequest);
+            string uri = "/api/v3/payment_requests/" + this.id;
+            var apruveResponse = apruveClient.put<PaymentRequestUpdateResponse>(uri, this);
 
             // Return the response object, which should be a PaymentRequestUpdateResponse object
             return apruveResponse;
         }
 
-        public static PaymentRequestUpdateResponse finalize(string paymentRequestId)
+        public PaymentRequestUpdateResponse finalize()
         {
             var apruveClient = ApruveClient.getInstance();
-            string uri = "/api/v3/payment_requests/" + paymentRequestId + "/finalize";
+            string uri = "/api/v3/payment_requests/" + this.id + "/finalize";
             var apruveResponse = apruveClient.post<PaymentRequestUpdateResponse>(null, uri, System.Net.HttpStatusCode.OK);
 
             // Return the response object, which should be a PaymentRequestUpdateResponse object
@@ -90,6 +91,10 @@ namespace Apruve.Models
         {
             StringBuilder valueString = new StringBuilder();
             valueString.Append(merchant_id);
+            if (merchant_order_id != null)
+            {
+                valueString.Append(merchant_order_id);
+            }
             if (amount_cents != null)
             {
                 valueString.Append(amount_cents);
