@@ -1,7 +1,11 @@
 apruve-csharp
 =============
 
-C# client library for interacting with the Apruve API
+C# client library for interacting with the Apruve API.
+
+A NuGet package exists for this library, and can be found [here](https://www.nuget.org/packages/Apruve/).
+
+
 
 ## Issues
 
@@ -69,7 +73,7 @@ hash = paymentRequest.toSecureHash();
 
 Each model class defines methods that implement calls to the different RESTful APIs defined for that model.  The basic pattern is that you pass a Payment object, a PaymentRequest object, and/or a PaymentRequest object's ID to one of the API call methods on the Payment or PaymentRequest class in order to generate the request uri and body.
 
-The requests themselves are created, executed, and validated by RestSharp (http://restsharp.org/) and the responseHandler() methods on the ApruveClient class.
+The requests themselves are created, executed, and validated by [RestSharp](http://restsharp.org/) and the responseHandler() methods on the ApruveClient class.
 
 For example, 
 this will retrieve and update a Payment Request:
@@ -94,14 +98,16 @@ if (response != null) {
 
 ## Testing
 
-This repository includes an ApruveTest project intended to be used with the Microsoft Unit Test Framework. These tests can be run with Microsoft Visual Studio's Test Explorer (http://msdn.microsoft.com/en-us/library/hh270865.aspx).
+This repository includes an ApruveTest project intended to be used with the Microsoft Unit Test Framework. These tests can be run with Microsoft Visual Studio's [Test Explorer](http://msdn.microsoft.com/en-us/library/hh270865.aspx).
+
+You can download the ApruveTest NuGet package [here](https://www.nuget.org/packages/ApruveTest/). Installing it will pull in all the necessary dependencies for testing for you. 
 
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Write your code **and tests**
-4. Ensure all [tests](#testing) still pass
-5. Commit your changes (`git commit -am 'Add some feature'`)
+4. Ensure all [tests](https://github.com/apruve/apruve-csharp/tree/master/Apruve/ApruveTest) still pass
+5. Commit your changes (`git commit -m 'Add some feature'`)
 6. Push to the branch (`git push origin my-new-feature`)
 7. Create new pull request
