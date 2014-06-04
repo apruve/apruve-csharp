@@ -82,13 +82,14 @@ this will retrieve and update a Payment Request:
 PaymentRequest paymentRequest = PaymentRequest.get(paymentRequestId);
 paymentRequest.amount_cents = 12345;
 paymentRequest.shipping_cents = 200;
-paymentRequest.update(paymentRequest);
+paymentRequest.update();
 ```
 
 API Calls either return instances of the method class, or an instance of PaymentRequestUpdateResponse. If the call fails, the system will throw an ApruveException instead of returning one of the aforementioned response objects. This ApruveException object will have the response status message as a parameter.
 
 ```
-PaymentRequestUpdateResponse response = PaymentRequest.finalize(paymentRequestId);
+PaymentRequest paymentRequest = PaymentRequest.get(paymentRequestId);
+PaymentRequestUpdateResponse response = paymentRequest.finalize();
 if (response != null) {
   System.Diagnostics.Debug.WriteLine("The new status is: " + response.status);
 } else {
