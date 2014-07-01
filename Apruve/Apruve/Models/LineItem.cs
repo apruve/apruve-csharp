@@ -38,6 +38,7 @@ namespace Apruve.Models
         public string toValueString()
         {
             StringBuilder valueString = new StringBuilder();
+            valueString.Append(id);
             valueString.Append(this.title);
             if (amount_cents != null)
             {
@@ -59,6 +60,11 @@ namespace Apruve.Models
             {
                 valueString.Append(view_product_url);
             }
+            valueString.Append(start_at);
+            valueString.Append(end_at);
+            valueString.Append(canceled_at);
+            valueString.Append(last_charge_at);
+            valueString.Append(next_charge_at);
             return valueString.ToString();
         }
     }
