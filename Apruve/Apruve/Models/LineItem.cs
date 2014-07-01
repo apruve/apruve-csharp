@@ -22,6 +22,18 @@ namespace Apruve.Models
         public string vendor { get; set; }
         public string view_product_url { get; set; }
 
+        // for subscriptions:
+        public string plan_code { get; set; }
+        public string start_at { get; set; }
+        public string end_at { get; set; }
+        public string canceled_at { get; set; }
+        public string last_charge_at { get; set; }
+        public string next_charge_at { get; set; }
+
+        // set by apruve:
+        public string id { get; set; }
+        public string payment_request_id { get; set; }
+
         // Methods
         public string toValueString()
         {
