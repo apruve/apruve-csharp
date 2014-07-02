@@ -22,9 +22,6 @@ namespace Apruve.Models
         public string vendor { get; set; }
         public string view_product_url { get; set; }
 
-        // for subscriptions:
-        
-
         // set by apruve:
         public string id { get; set; }
         public string payment_request_id { get; set; }
