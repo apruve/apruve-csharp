@@ -42,7 +42,7 @@ namespace Apruve.Models
             string uri = "/api/v3/subscriptions/" + subscriptionId;
             var apruveResponse = apruveClient.get<Subscription>(uri);
 
-            // Return the response object, which should be a PaymentRequest object
+            // Return the response object, which should be a Subscription object
             return apruveResponse;
         }
 

@@ -32,7 +32,7 @@ namespace Apruve.Models
             string uri = "/api/v3/payment_requests/" + paymentRequestId + "/payments/" + paymentId;
             var apruveResponse = apruveClient.get<Payment>(uri);
 
-            // Return the response object, which should be a PaymentRequest object
+            // Return the response object, which should be a Payment object
             return apruveResponse;
         }
 
