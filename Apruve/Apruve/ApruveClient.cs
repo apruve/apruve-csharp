@@ -81,10 +81,8 @@ namespace Apruve
 
             // execute & validate request
             var response = restClient.Execute<T>(request);
-            Console.WriteLine(response.Content);
             if (response.StatusCode != successStatus)
             {
-                Console.WriteLine("RESPONSE CODE: " + response.StatusCode);
                 throw new ApruveException(response.StatusCode.ToString());
             }
             if (response.ErrorException != null)
@@ -108,7 +106,6 @@ namespace Apruve
             var request = new RestRequest(uri, Method.POST);
             request.RequestFormat = DataFormat.Json;
             request.AddBody(requestBody);
-            Console.WriteLine("REQUEST BODY: " + request.XmlSerializer.ToString());
 
             // pass request to responseHandler
             return this.responseHandler<T>(request, successCode);
