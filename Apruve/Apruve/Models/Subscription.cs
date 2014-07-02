@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Web;
+using System.Threading.Tasks;
 
 namespace Apruve.Models
 {
-    public class LineItem
+    public class Subscription : LineItem
     {
+        
         // required on create:
         public string title { get; set; }
         public int amount_cents { get; set; }
@@ -23,17 +24,22 @@ namespace Apruve.Models
         public string view_product_url { get; set; }
 
         // for subscriptions:
-        
+        public string plan_code { get; set; }
+        public string start_at { get; set; }
+        public string end_at { get; set; }
+        public string canceled_at { get; set; }
+        public string last_charge_at { get; set; }
+        public string next_charge_at { get; set; }
 
         // set by apruve:
         public string id { get; set; }
         public string payment_request_id { get; set; }
 
         // Methods
-        public static LineItem get(string paymentRequestId, string lineItemId)
+        public static Subscription get(string subscriptionId)
         {
             var apruveClient = ApruveClient.getInstance();
-            string uri = "/api/v3/payment_requests/" + paymentRequestId + "/line_items/" + lineItemId;
+            string uri = "/api/v3/subscriptions/" + subscriptionId;
             var apruveResponse = apruveClient.get<Subscription>(uri);
 
             // Return the response object, which should be a PaymentRequest object

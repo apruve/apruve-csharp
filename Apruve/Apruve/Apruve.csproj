@@ -54,6 +54,8 @@
     <Compile Include="Models\PaymentItem.cs" />
     <Compile Include="Models\PaymentRequest.cs" />
     <Compile Include="Models\PaymentRequestUpdateResponse.cs" />
+    <Compile Include="Models\Subscription.cs" />
+    <Compile Include="Models\SubscriptionAdjustment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
