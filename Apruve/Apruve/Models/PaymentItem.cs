@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Apruve.Models
 {
-    public class LineItem
+    public class PaymentItem
     {
         // required on create:
         public string title { get; set; }
@@ -22,25 +22,11 @@ namespace Apruve.Models
         public string vendor { get; set; }
         public string view_product_url { get; set; }
 
-        // set by apruve:
-        public string id { get; set; }
-        public string payment_request_id { get; set; }
 
         // Methods
-        public static LineItem get(string paymentRequestId, string lineItemId)
-        {
-            var apruveClient = ApruveClient.getInstance();
-            string uri = "/api/v3/payment_requests/" + paymentRequestId + "/line_items/" + lineItemId;
-            var apruveResponse = apruveClient.get<Subscription>(uri);
-
-            // Return the response object, which should be a PaymentRequest object
-            return apruveResponse;
-        }
-
         public string toValueString()
         {
             StringBuilder valueString = new StringBuilder();
-            valueString.Append(id);
             valueString.Append(this.title);
             if (amount_cents != null)
             {
@@ -65,6 +51,4 @@ namespace Apruve.Models
             return valueString.ToString();
         }
     }
-
-
 }

@@ -130,6 +130,15 @@ namespace Apruve
             // pass request to responseHandler
             return this.responseHandler<T>(request, System.Net.HttpStatusCode.OK);
         }
+        public T delete<T>(string uri) where T : new()
+        {
+            // build request
+            var request = new RestRequest(uri, Method.DELETE);
+            request.RequestFormat = DataFormat.Json;
+
+            // pass request to responseHandler
+            return this.responseHandler<T>(request, System.Net.HttpStatusCode.OK);
+        }
 
         // for unit testing
         public static void initToNull()
