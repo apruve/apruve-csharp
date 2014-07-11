@@ -23,7 +23,7 @@ namespace Apruve.Models
 
         //Optional Params
         public string currency { get; set; }
-        public string merchantNotes { get; set; }
+        public string merchant_notes { get; set; }
         public List<PaymentItem> payment_items { get; set; }
 
         public static Payment get(string paymentRequestId, string paymentId)
