@@ -33,7 +33,7 @@ namespace ApruveTest
     {
         private static string apiKey = "testApiKey";
         private static string simpleValueString = "testMerchantId100A Line Item100";
-        private static string complexValueString = "testMerchantId100A Line Item100Another Line Item100A description for this lineA_SKU_NUMBER2014-07-13T18:02:49Z";
+        private static string complexValueString = "testMerchantId1002014-07-13T18:02:49ZA Line Item100Another Line Item100A description for this lineA_SKU_NUMBER";
 
         [TestMethod]
         public void testConstructor()
@@ -61,7 +61,7 @@ namespace ApruveTest
         [TestMethod]
         public void testToSecureHashComplex()
         {
-            string secureHash = "66cc5e1ffecb8dbafa850627965add6fea212cc8259cda97f2b2468db86a1d62";
+            string secureHash = "b09f2f70e827d67deeff30f49467d20235ab339e9b3b2aec40f3fa257ff455bf";
             ApruveClient.init(apiKey, ApruveEnvironment.testEnvironment());
             PaymentRequest mockPaymentRequest = MockPaymentRequest.getPaymentRequestComplex();
 

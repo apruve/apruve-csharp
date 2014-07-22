@@ -112,13 +112,13 @@ namespace Apruve.Models
             {
                 valueString.Append(shipping_cents);
             }
-            foreach (LineItem line in line_items)
-            {
-                valueString.Append(line.toValueString());
-            }
             if (expires_at != null)
             {
                 valueString.Append(expires_at);
+            }
+            foreach (LineItem line in line_items)
+            {
+                valueString.Append(line.toValueString());
             }
             return valueString.ToString();
         }
