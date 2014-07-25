@@ -24,6 +24,7 @@ namespace Apruve.Models
         public string view_url { get; set; }
         public string created_at { get; set; }
         public string updated_at { get; set; }
+        public string expires_at { get; set; }
 
         // optional params
         public string merchant_order_id { get; set; }
@@ -110,6 +111,10 @@ namespace Apruve.Models
             if (shipping_cents != null)
             {
                 valueString.Append(shipping_cents);
+            }
+            if (expires_at != null)
+            {
+                valueString.Append(expires_at);
             }
             foreach (LineItem line in line_items)
             {
