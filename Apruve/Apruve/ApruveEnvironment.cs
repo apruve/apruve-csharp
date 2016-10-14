@@ -17,7 +17,7 @@ namespace Apruve
 
         public static ApruveEnvironment prodEnvironment()
         {
-            ApruveEnvironment environmentObject = new ApruveEnvironment("https://www.apruve.com");
+            ApruveEnvironment environmentObject = new ApruveEnvironment("https://app.apruve.com");
             return environmentObject;
         }
 

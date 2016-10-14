@@ -34,8 +34,8 @@ namespace Apruve
 	     * 
 	     * @param api_key
 	     *            An API Key from your user account. Create on for your test
-	     *            account on https://test.apruve.com/merchants, or create one
-	     *            for live transactions at https://www.apruve.com/merchants. We
+	     *            account on https://test.apruve.com, or create one
+	     *            for live transactions at https://www.apruve.com. We
 	     *            recommend that you create a unique API Key for each merchant
 	     *            account.
 	     * @param env
